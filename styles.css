@@ -1,3 +1,36 @@
-button{
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body{
+    font-family: 'Indie Flower', cursive;
+    background-color:#03203C;
+    color: snow;
+}
+
+button {
     margin-top: 0.5rem;
+    border-radius: 1rem;
+    color:#03203C;
+    font-size: x-large ;
+}
+
+header {
+    text-align: center;
+}
+
+section{
+    text-align: center;
+    padding: 0.5rem;
+    background-image: url(./undraw_playing_cards_cywn.svg);
+    background-size: 550px;
+    font-size: x-large ;
+
+}
+input{
+    border-radius: 1rem;
+    padding: 0.5rem
+}
+div{
+    text-align: center;
+    font-weight: bolder;
+    font-size: x-large ;
 }

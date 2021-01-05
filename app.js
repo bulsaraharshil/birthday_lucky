@@ -8,28 +8,20 @@ function luckHandler() {
     let dobDigits = [];
     //Checking date validity
     if (ip1.value == "") {
-        div.innerText = "Enter a valid date!"
+        div.innerText = "Enter a valid date!!!"
     } else if (ip2.value == "") {
-        div.innerText = "Please provide a lucky number."
+        div.innerText = "Please enter your lucky number."
     } else {
-        //Split DoB into date, month and year - array
-        let dobArr = ip1.value.split("-");
-        console.log(dobArr);
+        //Split DoB into date, month and year - array and
         //Split them further into 3 arrays with digits
-        dobArr.map(function (val) {
-            dobDigits.push(val.split(""));
-        });
-        console.log(dobDigits);
+        ip1.value.split("-").map(val => dobDigits.push(val.split("")));
         //Iterate over digits and sum the DoB digits
-        dobDigits.map(function(vals) {
-            vals.map(num => dobSum += parseInt(num));
-        });
-        console.log(dobSum);
+        dobDigits.map(vals => vals.map(sum => dobSum += parseInt(sum)));
         //Check if it is divisible by lucky number
-        if (dobSum % parseInt(ip2.value) == 0) {
-            div.innerText = "Congratulations!!! You're birthday is lucky "
+        if (parseInt(dobSum) % parseInt(ip2.value) == 0) {
+            div.innerText = "Congratulations!!! Your birthday is lucky"
         } else {
-            div.innerText = "You're birthday missed to be lucky "
+            div.innerText = "Your birthday missed to be lucky"
         }
     }
 }
